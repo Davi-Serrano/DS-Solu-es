@@ -1,8 +1,12 @@
+:root{
+  --primary: #0099ff;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif
   }
   
   html {
@@ -12,7 +16,7 @@
 
   a{
     text-decoration: none;
-    color: black;
+    color: white;
   }
 
 
@@ -21,16 +25,16 @@
   .initial-container{
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   header, .section, .fly-container{
     max-width: 100vw;
-    border: 1px solid red;
   }
 
   header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
     padding: 0 3em;
@@ -38,20 +42,231 @@
     height: 10vh;
   }
 
-  .menu a{
-    padding: 0 1em;
+  header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+
   }
 
-  .header-section{
-    display: flex;
-    flex-direction: column;
+  header .logo img{
+    width: 0px;
 
-    height: 80vh;
+    transition:  1.5s;
+  }
 
-    border: 1px solid red;
+  header .logo:hover img{
+    width: 30px;
+  }
+
+  header  a{
+    padding: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  header  a{
+    color: white;
+    position: relative;
+  
+    transition: ease .5s;
   }
 
   
+  header  a::after{
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  
+    transition: ease 0.5s;
+  }
+  
+  header  a:hover::after{
+   width: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .header-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+
+    height: 80vh;
+    position: relative;
+  }
+
+/* SEÇÃO ESQUERDA */
+
+
+  .left{
+    margin-left: 3em;
+    margin-bottom: 4em;
+  }
+
+  ul{
+    position: relative;
+    transform: skewY(-15deg);
+    transition: 0.5s;
+    
+  }
+
+  ul:hover{
+      cursor: pointer;
+  }
+
+  ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background-color: var(--primary);
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+
+  }
+
+  ul li:hover{
+    background-color: rgb(2, 139, 230);
+    transform: translateX(-50px);
+
+  }
+
+  ul li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: #077dcc;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+  }
+
+  ul li:hover::before{
+    background-color: #002b47;
+  }
+
+  ul li::after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #077dcc;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+  }
+
+
+
+  ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+  }
+  ul li:hover a{
+    opacity: .5;
+    cursor: pointer;
+  }
+
+  ul li:last-child:after{
+    box-shadow: -100px 100px 20px #0f75b9;
+    opacity: .5;
+  }
+
+
+/* SEÇÃO DIREITA */
+
+  .header-section .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;;
+    align-items: center;
+    width: 400px;
+  }
+  .header-section .right h2{
+    font-size: 30px;
+    color: #0f75b9;
+    padding-bottom: .3em;
+  }
+
+  .header-section .right p{
+      text-align: center;
+      font-weight: 500;
+      padding-bottom: .3em;
+  }
+
+  .header-section .right p span{
+    color: #34af23;
+    font-weight: 700;
+  }
+
+  .header-section .right p span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .header-section .right .btn-mais{
+      margin-top: 2.5em;
+      background-color: var(--primary);
+      padding: .5em 1em;
+      color: #fff;
+
+      box-shadow: inset 0 0 16px var(--primary), 0 0 16px var(--primary);
+
+      transition: .5s;
+  }
+
+  .header-section .right .btn-mais:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 32px var(--primary), 0 0 32px var(--primary);
+
+    transform: scale(1.2);  
+  }
+
+
+
+  /* ONDAS */
+
+  .wave-top{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+  }
+  .wave-bottom{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+
 
   /*part2*/
 
@@ -91,7 +306,6 @@
   .box1, .box2{
     width: 300px;
     height: 300px;
-    border: 1px solid red;
 
 }
 
