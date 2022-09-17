@@ -1,0 +1,25 @@
+.animate-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #077dcc;
+    padding: 2em 0;
+  }
+
+   .box1{
+    height: 300px;
+    width: 300px;
+    border: 1px solid red;
+  }
+
+  .animate-container2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 1px solid red;
+
+    padding: 2em 0;
+  }
+  

@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     height: 70vh;
-
   }
 
   .informs{
@@ -72,13 +71,46 @@
       z-index: 10;
   }
 
-
-
-
+  .section h2{
+    text-align: center;
+    margin-top: 2em;
+    color: var(--primary);
+  }
 
   .bottom{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vh;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    padding: 2em;
+
+    border-radius: 12px;
+    
+    background-color: var(--primary); 
+  }
+   
+  .card ul{
+    margin-top: 2em;
+  }
+
+  .card ul li{
+    list-style: none;
+
+    padding: .3em;
+    font-size: 18px;
+
+    font-weight: bold;
+    color: white;
+  }
+
+  .mark{
+    padding-right: .5em;
   }
