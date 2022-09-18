@@ -95,6 +95,7 @@
   header  a:hover::after{
    width: 100%;
   }
+  /* SEÇÃO ESQUERDA */
 
   .header-section{
     display: flex;
@@ -104,9 +105,6 @@
     height: 80vh;
     position: relative;
   }
-
-/* SEÇÃO ESQUERDA */
-
 
   .left{
     margin-left: 3em;
@@ -190,6 +188,9 @@
   }
 
 
+  
+
+
 /* SEÇÃO DIREITA */
 
   .header-section .right{
@@ -238,6 +239,8 @@
 
     transform: scale(1.2);  
   }
+
+
 
 
 
