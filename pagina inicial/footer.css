@@ -1,15 +1,3 @@
-.section-feedback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 100%;
-}
-
-/* :root{
-    --bg:#0099ff ;
-  } */
-
 
 footer{
     display: flex;
